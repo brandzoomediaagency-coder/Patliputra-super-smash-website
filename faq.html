@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Patliputra Super Smash</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            background: #fff;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--secondary);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            height: auto;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://wa.me/your_number" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">PATLIPUTRA <span>SUPER SMASH</span></a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="selection.html" class="nav-link">Selection</a>
+                <a href="format.html" class="nav-link">Format</a>
+                <a href="academy.html" class="nav-link">Academy</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="register.html" class="btn register-cta">Register Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero" style="background: var(--primary); padding: 60px 0; color: white; text-align: center;">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find Quick Answers to Common Queries</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container" style="max-width: 800px;">
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">How can I register for the trials? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">You can register directly by clicking the "Register Now" button in the menu
+                        and filling out the online form. You will receive a confirmation message once submitted.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What is the age eligibility for different categories? <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Junior Category: Under 15 years. Senior Category: 16 to 23 years. Age is
+                        calculated based on government-issued birth certificates as of January 1st of the current year.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Where are the trials conducted? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Trials are conducted across multiple venues in Patna and surrounding
+                        districts. Exact venue details will be sent to your registered WhatsApp number 48 hours before
+                        the trial date.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is there a registration fee? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Yes, there is a nominal processing fee for ground trials. Payment can be
+                        made online through UPI or Credit/Debit cards on our secure payment gateway after completing the
+                        registration form.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How will the selection results be announced? <i
+                            class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Shortlisted players will be contacted individually via WhatsApp and the
+                        final list will also be published on our social media handles and the official website.</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <p>Couldn't find what you're looking for?</p>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center" style="padding: 20px 0;">
+            <p>&copy; 2026 Patliputra Super Smash. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

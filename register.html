@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Now | Patliputra Super Smash</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .registration-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--secondary);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fdfdfd;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 20, 20, 0.1);
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .file-upload {
+            border: 2px dashed #ddd;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .file-upload:hover {
+            border-color: var(--secondary);
+            background: #fff8f8;
+        }
+
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: span 1;
+            }
+
+            .registration-container {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background: #f4f7f9;">
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">PATLIPUTRA <span>SUPER SMASH</span></a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="registration-container">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;">Player Registration</h2>
+                    <p style="color: var(--gray);">Secure your spot for the upcoming trials. Please fill in accurate
+                        details.</p>
+                </div>
+
+                <form id="registration-form">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label>Full Name</label>
+                            <input type="text" name="fullname" required placeholder="As per Aadhaar/Birth Certificate">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number (WhatsApp)</label>
+                            <input type="tel" name="phone" required placeholder="10-digit mobile number">
+                        </div>
+                        <div class="form-group">
+                            <label>Age</label>
+                            <input type="number" name="age" required min="8" max="25" placeholder="Current age">
+                        </div>
+                        <div class="form-group">
+                            <label>City / District</label>
+                            <input type="text" name="city" required placeholder="Your location in Bihar">
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="junior">Junior (Under 15)</option>
+                                <option value="senior">Senior (16-23)</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Primary Playing Role</label>
+                            <select name="role" required>
+                                <option value="">Select Role</option>
+                                <option value="batsman">Batsman</option>
+                                <option value="bowler">Bowler</option>
+                                <option value="all-rounder">All-Rounder</option>
+                                <option value="wicket-keeper">Wicket Keeper</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Upload Player Photo</label>
+                            <div class="file-upload" onclick="document.getElementById('photo-input').click()">
+                                <i class="fas fa-cloud-upload-alt"
+                                    style="font-size: 2rem; color: var(--secondary); margin-bottom: 10px;"></i>
+                                <p>Click to upload or drag and drop your photo</p>
+                                <span style="font-size: 0.8rem; color: #999;">(Max size: 2MB, JPG/PNG)</span>
+                                <input type="file" id="photo-input" name="photo" style="display: none;"
+                                    accept="image/*">
+                            </div>
+                        </div>
+                        <div class="form-group full-width" style="display: flex; gap: 10px; align-items: flex-start;">
+                            <input type="checkbox" required style="width: auto; margin-top: 5px;">
+                            <label style="font-weight: 400; font-size: 0.9rem;">I agree to the <a href="terms.html"
+                                    target="_blank" style="color: var(--secondary); text-decoration: underline;">Terms &
+                                    Conditions</a> and certify that the information provided is correct.</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; padding: 18px; font-size: 1.1rem; margin-top: 20px;">Complete
+                        Registration</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center" style="padding: 20px 0;">
+            <p>&copy; 2026 Patliputra Super Smash. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
