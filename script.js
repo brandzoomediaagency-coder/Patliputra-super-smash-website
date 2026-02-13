@@ -1,65 +1,81 @@
-// Patliputra Super Smash - Site Logic
+// Patliputra Super Smash - Professional Interactions v2.0
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle (can be expanded later)
-    const setupMobileMenu = () => {
-        // Logic for mobile menu will go here if a burger icon is added
-    };
 
-    // Smooth Scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+    // Header Scroll Effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     });
 
-    // Form Submission Handling (Placeholder)
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-            console.log('Form Submitted:', data);
-            
-            // Show success message if on registration or contact page
-            if (form.id === 'registration-form') {
-                form.innerHTML = `
-                    <div class="success-message" style="text-align:center; padding: 40px; background: #f0fff4; border: 1px solid #c6f6d5; border-radius: 8px;">
-                        <h3 style="color: #2f855a; margin-bottom: 10px;">Registration Successful!</h3>
-                        <p>Thank you for registering. Our team will contact you soon on WhatsApp.</p>
-                        <a href="index.html" class="btn btn-primary" style="margin-top:20px;">Return Home</a>
-                    </div>
-                `;
-            } else if (form.id === 'contact-form') {
-                 form.innerHTML = `
-                    <div class="success-message" style="text-align:center; padding: 40px; background: #f0fff4; border: 1px solid #c6f6d5; border-radius: 8px;">
-                        <h3 style="color: #2f855a; margin-bottom: 10px;">Message Sent!</h3>
-                        <p>Thank you for reaching out. We will get back to you shortly.</p>
-                    </div>
-                `;
+    // Reveal on scroll (Fallback for GSAP)
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add('active');
             }
         });
-    });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
 
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1
+    // Stats Counter Animation
+    const stats = document.querySelectorAll('.stat-number');
+    let started = false;
+
+    const startCount = (el) => {
+        let goal = parseInt(el.dataset.goal);
+        let count = setInterval(() => {
+            el.textContent++;
+            if (el.textContent == goal) {
+                clearInterval(count);
+                el.textContent += '+';
+            }
+        }, 2000 / goal);
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fadeIn');
-                observer.unobserve(entry.target);
+    window.addEventListener('scroll', () => {
+        const statsSection = document.querySelector('.stats-bar');
+        if (statsSection) {
+            const pos = statsSection.getBoundingClientRect().top;
+            if (pos < window.innerHeight - 100 && !started) {
+                stats.forEach(startCount);
+                started = true;
             }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
-        observer.observe(el);
+        }
     });
+
+    // Placeholder for Register Form success handling
+    const regForm = document.getElementById('registration-form');
+    if (regForm) {
+        regForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // In a real app, you'd send data here.
+            // Professional UX Feedback:
+            const btn = regForm.querySelector('button');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                regForm.innerHTML = `
+                    <div style="text-align:center; padding: 60px 40px;">
+                        <div style="width: 80px; height: 80px; background: #27ae60; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; font-size: 40px;">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h2 style="color: var(--primary); margin-bottom: 20px;">Registration Received!</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 30px;">Thank you for your interest. Our recruitment team will review your profile and contact you via WhatsApp shortly.</p>
+                        <a href="index.html" class="btn btn-outline">Back to Homepage</a>
+                    </div>
+                `;
+            }, 1500);
+        });
+    }
 });

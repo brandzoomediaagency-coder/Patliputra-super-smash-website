@@ -1,27 +1,25 @@
 /* 
-  Patliputra Super Smash - Core Design System 
-  Theme: Navy Blue, Red, White
-  Fonts: Outfit, Inter
+  Patliputra Super Smash - T20 Gully Professional Edition
+  Design Reference: t20gullycricket.com
+  Theme: Navy Blue, Power Red, Pure White
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --primary: #001F3F;    /* Navy Blue */
-    --secondary: #D41414;  /* Power Red */
-    --accent: #FFFFFF;    /* White */
-    --text-dark: #1A1A1A;
-    --text-light: #F4F4F4;
-    --bg-light: #FFFFFF;
-    --bg-dark: #000D1A;
-    --gray: #666666;
-    --light-gray: #EEEEEE;
-    
-    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    --shadow: 0 10px 30px rgba(0,0,0,0.1);
-    --shadow-hover: 0 15px 45px rgba(0,0,0,0.2);
-    --border-radius: 8px;
-    --header-height: 80px;
+    --primary-navy: #001A33;
+    --accent-red: #D41414;
+    --pure-white: #FFFFFF;
+    --soft-gray: #F4F7FA;
+    --dark-overlay: rgba(0, 26, 51, 0.85);
+
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --shadow-pro: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --header-height: 120px;
+    /* T20 Gully uses a taller dual header */
 }
 
 * {
@@ -30,141 +28,48 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-dark);
-    background-color: var(--bg-light);
+    font-family: var(--font-body);
+    background-color: var(--soft-gray);
+    color: var(--primary-navy);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, .brand-font {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
+h1,
+h2,
+h3,
+h4,
+.league-font {
+    font-family: var(--font-heading);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: var(--transition);
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* Utilities */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-padding {
-    padding: 100px 0;
-}
-
-.text-center { text-align: center; }
-.btn {
-    display: inline-block;
-    padding: 14px 28px;
-    border-radius: 4px;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: var(--transition);
-    border: none;
-}
-
-.btn-primary {
-    background: var(--secondary);
-    color: var(--accent);
-}
-
-.btn-primary:hover {
-    background: #B31010;
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-}
-
-.btn-outline:hover {
-    background: var(--accent);
-    color: var(--primary);
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 50px;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background: var(--secondary);
-}
-
-/* WhatsApp Floating Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25D366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 1000;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #128C7E;
-}
-
-/* Header & Nav */
-header {
-    height: var(--header-height);
-    background: var(--primary);
+/* --- T20 Gully Dual-Bar Header --- */
+.top-info-bar {
+    background: var(--accent-red);
     color: white;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.top-info-content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+header {
+    background: var(--pure-white);
+    height: 85px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
-    z-index: 1001;
-    box-shadow: var(--shadow);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
 }
 
 .nav-container {
@@ -174,67 +79,203 @@ header {
     width: 100%;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--accent);
-}
-
-.logo span {
-    color: var(--secondary);
-}
-
-.nav-menu {
+.league-logo {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.league-logo h1 {
+    font-size: 1.8rem;
+    color: var(--primary-navy);
+    line-height: 1;
+}
+
+.league-logo h1 span {
+    color: var(--accent-red);
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
     align-items: center;
 }
 
-.nav-link {
-    font-weight: 500;
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-navy);
+    font-weight: 700;
     font-size: 0.9rem;
     text-transform: uppercase;
+    transition: var(--transition);
 }
 
-.nav-link:hover {
-    color: var(--secondary);
+.nav-links a:hover {
+    color: var(--accent-red);
 }
 
-.register-cta {
-    background: var(--secondary);
-    padding: 8px 20px;
+.btn-register-pro {
+    background: var(--accent-red);
+    color: white !important;
+    padding: 12px 25px;
     border-radius: 4px;
-    font-weight: 700;
+    font-weight: 800 !important;
+    box-shadow: 0 10px 20px rgba(212, 20, 20, 0.2);
 }
 
-/* Responsive Footer */
+/* --- Sports Hero Section --- */
+.gully-hero {
+    height: 85vh;
+    background: linear-gradient(var(--dark-overlay), var(--dark-overlay)), url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    /* Slanted Sports Look */
+}
+
+.hero-inner {
+    max-width: 800px;
+}
+
+.hero-inner h2 {
+    font-size: 5rem;
+    line-height: 0.9;
+    margin-bottom: 20px;
+}
+
+.hero-inner h2 span {
+    color: var(--accent-red);
+}
+
+/* --- Action Cards --- */
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: -100px;
+    position: relative;
+    z-index: 100;
+}
+
+.action-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-pro);
+    border-bottom: 4px solid #eee;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.action-card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: var(--accent-red);
+}
+
+.action-card i {
+    font-size: 3rem;
+    color: var(--accent-red);
+    margin-bottom: 20px;
+}
+
+/* --- Section Styling --- */
+section {
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pro-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pro-title h3 {
+    font-size: 3rem;
+    color: var(--primary-navy);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.pro-title h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 5px;
+    background: var(--accent-red);
+}
+
+/* --- Footer --- */
 footer {
-    background: var(--primary);
-    color: var(--text-light);
+    background: var(--primary-navy);
+    color: white;
     padding: 80px 0 20px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-about h3 { color: var(--accent); margin-bottom: 20px; }
-.footer-links h3 { color: var(--accent); margin-bottom: 20px; }
-.footer-links ul li { margin-bottom: 10px; }
-.footer-links ul li a:hover { color: var(--secondary); padding-left: 5px; }
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--gray);
+.footer-col h4 {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    border-left: 4px solid var(--accent-red);
+    padding-left: 15px;
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-    .nav-menu { display: none; } /* Mobile menu logic to be added in JS */
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent-red);
+    padding-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-inner h2 {
+        font-size: 3rem;
+    }
+
+    .gully-hero {
+        height: auto;
+        padding: 100px 0;
+        clip-path: none;
+    }
+
+    .action-grid {
+        margin-top: 30px;
+    }
 }
