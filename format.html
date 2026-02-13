@@ -4,94 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League Format | Patliputra Super Smash</title>
+    <title>League Format | Patliputra Super Smash League</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <a href="https://wa.me/your_number" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
+    <!-- Sticky Header -->
     <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">PATLIPUTRA <span>SUPER SMASH</span></a>
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="selection.html" class="nav-link">Selection</a>
-                <a href="format.html" class="nav-link">Format</a>
-                <a href="academy.html" class="nav-link">Academy</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="register.html" class="btn register-cta">Register Now</a>
+        <div class="container nav-flex">
+            <a href="index.html" class="brand-logo">
+                <i class="fas fa-cricket-bat-ball" style="font-size: 2.5rem; color: var(--red);"></i>
+                <h1>PATLIPUTRA <span>SUPER SMASH LEAGUE</span></h1>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="advantages.html">Advantages</a>
+                <a href="trials.html">Trials</a>
+                <div class="dropdown">
+                    <button class="drop-btn">Explore <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="format.html">League Format</a>
+                        <a href="teams.html">Teams & Players</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="testimonials.html">Testimonials</a>
+                        <a href="blog.html">Blog & News</a>
+                        <a href="documents.html">Mandatory Docs</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="policy.html">Privacy Policy</a>
+                    </div>
+                </div>
+                <a href="register.html" class="btn-nav-reg">Register Now <i class="fas fa-arrow-right"></i></a>
             </nav>
         </div>
     </header>
 
-    <section class="page-hero" style="background: var(--primary); padding: 60px 0; color: white; text-align: center;">
+    <!-- Subpage Hero -->
+    <section style="background: var(--navy); color: white; padding: 60px 0; text-align: center;">
         <div class="container">
-            <h1>League Format</h1>
-            <p>Modern T20 Cricket at Its Finest</p>
+            <h2 style="font-size: 3rem; margin-bottom: 10px;">League <span>Format</span></h2>
+            <p style="opacity: 0.8; font-size: 1.1rem;">Transparent Merit-Based Selection & Tournament Flow</p>
         </div>
     </section>
 
-    <section class="section-padding">
+    <!-- Format Details -->
+    <section>
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                <div
-                    style="background: white; padding: 40px; border-radius: 12px; box-shadow: var(--shadow); text-align: center;">
-                    <i class="fas fa-users" style="font-size: 3rem; color: var(--secondary); margin-bottom: 20px;"></i>
-                    <h3>Team Distribution</h3>
-                    <p>8 Professional Franchises representing different regions of Bihar.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+                <div>
+                    <h3 style="font-size: 2rem; margin-bottom: 30px; color: var(--navy);">Match <span>Types &
+                            Schedule</span></h3>
+                    <div
+                        style="background: var(--gray-light); padding: 30px; border-radius: 12px; margin-bottom: 30px;">
+                        <h4 style="color: var(--red); margin-bottom: 15px;">Standard T20 Format</h4>
+                        <p style="color: var(--gray-text);">All matches follow the official ICC T20 rules, providing
+                            players with authentic professional experience. Each match is played with high-quality white
+                            balls and standard safety protocols.</p>
+                    </div>
+                    <div style="background: var(--gray-light); padding: 30px; border-radius: 12px;">
+                        <h4 style="color: var(--navy); margin-bottom: 15px;">Tournament Flow</h4>
+                        <ul style="list-style: none;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+                                <div
+                                    style="width: 30px; height: 30px; background: var(--red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                                    1</div>
+                                <span>District Zonal Trials</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+                                <div
+                                    style="width: 30px; height: 30px; background: var(--navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                                    2</div>
+                                <span>State Level Selection Camp</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 15px;">
+                                <div
+                                    style="width: 30px; height: 30px; background: var(--navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                                    3</div>
+                                <span>National League Rounds</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div
-                    style="background: white; padding: 40px; border-radius: 12px; box-shadow: var(--shadow); text-align: center;">
-                    <i class="fas fa-calendar-alt"
-                        style="font-size: 3rem; color: var(--secondary); margin-bottom: 20px;"></i>
-                    <h3>Match Format</h3>
-                    <p>Standard T20 rules under lights. Each team plays every other team once in the league phase.</p>
+                <div>
+                    <h3 style="font-size: 2rem; margin-bottom: 30px; color: var(--navy);">Selection <span>Process</span>
+                    </h3>
+                    <p style="margin-bottom: 25px; color: var(--gray-text);">Our selection process is 100% merit-based
+                        and transparent. A panel of experienced selectors evaluates players on multiple parameters:</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="advantage-card" style="padding: 20px; text-align: left;">
+                            <i class="fas fa-baseball-bat-ball" style="font-size: 1.5rem; margin-bottom: 10px;"></i>
+                            <h5>Technical Skills</h5>
+                        </div>
+                        <div class="advantage-card" style="padding: 20px; text-align: left;">
+                            <i class="fas fa-heart-pulse" style="font-size: 1.5rem; margin-bottom: 10px;"></i>
+                            <h5>Physical Fitness</h5>
+                        </div>
+                        <div class="advantage-card" style="padding: 20px; text-align: left;">
+                            <i class="fas fa-brain" style="font-size: 1.5rem; margin-bottom: 10px;"></i>
+                            <h5>Mental Game</h5>
+                        </div>
+                        <div class="advantage-card" style="padding: 20px; text-align: left;">
+                            <i class="fas fa-people-group" style="font-size: 1.5rem; margin-bottom: 10px;"></i>
+                            <h5>Team Spirit</h5>
+                        </div>
+                    </div>
                 </div>
-                <div
-                    style="background: white; padding: 40px; border-radius: 12px; box-shadow: var(--shadow); text-align: center;">
-                    <i class="fas fa-hammer" style="font-size: 3rem; color: var(--secondary); margin-bottom: 20px;"></i>
-                    <h3>Auction System</h3>
-                    <p>Players are drafted through a transparent auction system based on trial performance and
-                        experience.</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 80px;">
-                <h2 class="section-title">Points Table Format</h2>
-                <table style="width: 100%; border-collapse: collapse; margin-top: 30px; text-align: left;">
-                    <thead>
-                        <tr style="background: var(--primary); color: white;">
-                            <th style="padding: 15px; border: 1px solid #ddd;">Outcome</th>
-                            <th style="padding: 15px; border: 1px solid #ddd;">Points Gained</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Win</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">2 Points</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px; border: 1px solid #ddd;">No Result / Tie</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">1 Point</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Loss</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">0 Points</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <div class="container text-center" style="padding: 20px 0;">
-            <p>&copy; 2026 Patliputra Super Smash. All Rights Reserved.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="flex: 2;">
+                    <h1 style="color: white; font-family: var(--font-primary); margin-bottom: 20px;">PSS LEAGUE</h1>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Building the future of Bihar's cricket. A platform
+                        designed for athletes to shine on the national stage.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="advantages.html">Advantages</a></li>
+                        <li><a href="trials.html">Upcoming Trials</a></li>
+                        <li><a href="format.html">League Format</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="policy.html">Privacy & Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Direct Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/918789434546"><i class="fab fa-whatsapp"></i> +91 878 943 4546</a>
+                        </li>
+                        <li><a href="mailto:contact@pssmash.com"><i class="fas fa-envelope"></i> contact@pssmash.com</a>
+                        </li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; color: #64748b; font-size: 0.8rem;">
+                Patliputra Super Smash © 2026 • All Rights Reserved
+            </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 

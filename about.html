@@ -4,103 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About The League | Patliputra Super Smash</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About Us | Patliputra Super Smash League</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="inner-page">
+<body>
 
-    <!-- Top Bar -->
-    <div class="top-info-bar">
-        <div class="container top-info-content">
-            <div><i class="fas fa-phone"></i> +91 70111 30144 | <i class="fas fa-envelope"></i> admin@pssmash.com</div>
-            <div>
-                <a href="#" style="color:white; margin-left:15px;"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" style="color:white; margin-left:15px;"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
+    <!-- Sticky Header -->
     <header>
-        <div class="container nav-container">
-            <a href="index.html" class="league-logo">
-                <h1>PSS <span>SUPER SMASH</span></h1>
+        <div class="container nav-flex">
+            <a href="index.html" class="brand-logo">
+                <i class="fas fa-cricket-bat-ball" style="font-size: 2.5rem; color: var(--red);"></i>
+                <h1>PATLIPUTRA <span>SUPER SMASH LEAGUE</span></h1>
             </a>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="about.html">The League</a>
-                <a href="selection.html">Selection</a>
-                <a href="award.html">Awards</a>
-                <a href="contact.html">Contact</a>
-                <a href="register.html" class="btn-register-pro">Register Now</a>
+                <a href="about.html">About Us</a>
+                <a href="advantages.html">Advantages</a>
+                <a href="trials.html">Trials</a>
+                <div class="dropdown">
+                    <button class="drop-btn">Explore <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="format.html">League Format</a>
+                        <a href="teams.html">Teams & Players</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="testimonials.html">Testimonials</a>
+                        <a href="blog.html">Blog & News</a>
+                        <a href="documents.html">Mandatory Docs</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="policy.html">Privacy Policy</a>
+                    </div>
+                </div>
+                <a href="register.html" class="btn-nav-reg">Register Now <i class="fas fa-arrow-right"></i></a>
             </nav>
         </div>
     </header>
 
-    <!-- Sub-page Hero -->
-    <section style="background: var(--primary-navy); color: white; padding: 60px 0; text-align: center;">
+    <!-- Subpage Hero -->
+    <section style="background: var(--navy); color: white; padding: 60px 0; text-align: center;">
         <div class="container">
-            <h2 style="font-size: 3rem; margin-bottom: 10px;">ABOUT THE <span>LEAGUE</span></h2>
-            <p style="opacity: 0.8;">The professional road to cricket excellence in Bihar.</p>
+            <h2 style="font-size: 3rem; margin-bottom: 10px;">About <span>Us</span></h2>
+            <p style="opacity: 0.8; font-size: 1.1rem;">Full description of Patliputra Super Smash</p>
         </div>
     </section>
 
+    <!-- Narrative Section -->
     <section>
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                <div>
-                    <h3 style="font-size: 2.5rem; color: var(--primary-navy); margin-bottom: 25px;">OUR
-                        <span>MISSION</span></h3>
-                    <p style="margin-bottom: 20px;">Patliputra Super Smash (PSS) is Bihar's premier T20 cricket league,
-                        dedicated to uncovering and nurturing the vast untapped cricketing talent in the state. Inspired
-                        by professional global league formats, PSS provides a high-stakes, professional environment for
-                        local players to showcase their skills.</p>
-                    <p>Our goal is to act as a bridge between local "gully" cricket and the professional national
-                        spotlight. We combine rigorous selection trials with elite coaching and franchise-based
-                        tournament play to ensure that every talented player gets a fair chance to succeed.</p>
+        <div class="container" style="max-width: 900px;">
+            <div class="section-title" style="text-align: left;">
+                <h3 style="font-size: 2.2rem; color: var(--navy);">Our <span>Journey & Purpose</span></h3>
+                <div class="divider" style="margin: 20px 0;"></div>
+            </div>
+            <p style="margin-bottom: 25px; font-size: 1.1rem; color: var(--gray-text);">Patliputra Super Smash (PSS) was
+                established with a singular mission: to provide a professional, transparent, and merit-based platform
+                for the immense cricketing talent hidden in every corner of Bihar. Our journey began with the
+                realization that thousands of gifted athletes lack the right infrastructure to showcase their potential
+                to national scouts.</p>
+            <p style="margin-bottom: 40px; color: var(--gray-text);">Over the years, PSS has grown into a prestigious
+                T20 league that combines world-class facilities with a rigorous selection process. We are not just a
+                tournament; we are a talent incubator dedicated to bridging the gap between local street cricket and
+                professional state-level glory.</p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 60px;">
+                <div class="advantage-card" style="text-align: center; background: var(--gray-light);">
+                    <i class="fas fa-handshake" style="font-size: 2rem; color: var(--red);"></i>
+                    <h5 style="margin-top: 15px;">Integrity</h5>
+                    <p style="font-size: 0.85rem;">Honesty and transparency in every selection.</p>
                 </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1000&q=80"
-                        style="width: 100%; border-radius: 8px; box-shadow: var(--shadow-pro);" alt="Cricket Field">
+                <div class="advantage-card" style="text-align: center; background: var(--gray-light);">
+                    <i class="fas fa-users" style="font-size: 2rem; color: var(--red);"></i>
+                    <h5 style="margin-top: 15px;">Equality</h5>
+                    <p style="font-size: 0.85rem;">A fair bridge for talent from every village.</p>
+                </div>
+                <div class="advantage-card" style="text-align: center; background: var(--gray-light);">
+                    <i class="fas fa-star" style="font-size: 2rem; color: var(--red);"></i>
+                    <h5 style="margin-top: 15px;">Excellence</h5>
+                    <p style="font-size: 0.85rem;">Striving for international playing standards.</p>
+                </div>
+                <div class="advantage-card" style="text-align: center; background: var(--gray-light);">
+                    <i class="fas fa-seedling" style="font-size: 2rem; color: var(--red);"></i>
+                    <h5 style="margin-top: 15px;">Local Growth</h5>
+                    <p style="font-size: 0.85rem;">Developing Bihar's sports infrastructure.</p>
                 </div>
             </div>
 
             <div
-                style="margin-top: 100px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
-                <div class="action-card" style="margin-top: 0; text-align: left;">
-                    <i class="fas fa-bullseye"></i>
-                    <h4>Vision</h4>
-                    <p>To be the leading talent incubator for cricket in East India, producing players who represent the
-                        nation.</p>
+                style="margin-top: 80px; display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center;">
+                <div style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80"
+                        style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid var(--red); box-shadow: var(--shadow-lg);"
+                        alt="President">
+                    <h4 style="margin-top: 20px;">Radhe Shyam</h4>
+                    <p style="color: var(--red); font-weight: 700;">Founder & President</p>
                 </div>
-                <div class="action-card" style="margin-top: 0; text-align: left;">
-                    <i class="fas fa-handshake"></i>
-                    <h4>Commitment</h4>
-                    <p>100% transparent selection process overseen by impartial experts and BCCI-certified coaches.</p>
-                </div>
-                <div class="action-card" style="margin-top: 0; text-align: left;">
-                    <i class="fas fa-globe"></i>
-                    <h4>Exposure</h4>
-                    <p>Providing digital tracking and media coverage to help players connect with professional scouts.
-                    </p>
+                <div
+                    style="background: white; padding: 40px; border-radius: 12px; border-right: 6px solid var(--red); box-shadow: var(--shadow-md);">
+                    <i class="fas fa-quote-left"
+                        style="font-size: 2rem; color: var(--gray-light); margin-bottom: 20px; display: block;"></i>
+                    <p style="font-style: italic; font-size: 1.1rem; line-height: 1.8; color: var(--navy);">"Cricket in
+                        Bihar is not just a game; it's a dream for millions. PSS was born to protect those dreams and
+                        give them wings. Our commitment is to ensure that the next superstar of Indian cricket finds
+                        their start right here on our local grounds."</p>
                 </div>
             </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 80px;">
+                <div class="advantage-card" style="text-align: left; border-left: 4px solid var(--red);">
+                    <i class="fas fa-bullseye"></i>
+                    <h4>Mission</h4>
+                    <p>To identify Bihar's finest cricketers through transparent trials and nurture them under the
+                        guidance of expert mentors for professional success.</p>
+                </div>
+                <div class="advantage-card" style="text-align: left; border-left: 4px solid var(--navy);">
+                    <i class="fas fa-eye"></i>
+                    <h4>Vision</h4>
+                    <p>To become the premier feeder league for national cricket, ensuring that no talent in Bihar goes
+                        unnoticed due to lack of opportunity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp CTA Bottom -->
+    <section style="background: var(--gray-light); text-align: center;">
+        <div class="container">
+            <h3 style="font-size: 2rem; margin-bottom: 30px;">Have Questions? <span>Connect With Us</span></h3>
+            <a href="https://wa.me/918789434546" class="btn-primary btn-whatsapp" target="_blank"
+                style="font-size: 1.2rem; padding: 20px 40px;">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp +91 8789434546
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div
-                style="text-align: center; margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px;">
-                <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">READY TO JOIN?</h2>
-                <a href="register.html" class="btn-register-pro"
-                    style="padding: 15px 40px; font-size: 1.1rem; text-decoration: none;">START YOUR JOURNEY</a>
+            <div class="footer-grid">
+                <div class="footer-col" style="flex: 2;">
+                    <h1 style="color: white; font-family: var(--font-primary); margin-bottom: 20px;">PSS LEAGUE</h1>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Building the future of Bihar's cricket. A platform
+                        designed for athletes to shine on the national stage.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="advantages.html">Advantages</a></li>
+                        <li><a href="trials.html">Upcoming Trials</a></li>
+                        <li><a href="format.html">League Format</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="policy.html">Privacy & Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Direct Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/918789434546"><i class="fab fa-whatsapp"></i> +91 878 943 4546</a>
+                        </li>
+                        <li><a href="mailto:contact@pssmash.com"><i class="fas fa-envelope"></i> contact@pssmash.com</a>
+                        </li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
             </div>
-            <div style="text-align: center; font-size: 0.8rem; color: rgba(255,255,255,0.4);">
-                &copy; 2026 PATLIPUTRA SUPER SMASH. ALL RIGHTS RESERVED.
+            <div
+                style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; color: #64748b; font-size: 0.8rem;">
+                Patliputra Super Smash © 2026 • All Rights Reserved
             </div>
         </div>
     </footer>
